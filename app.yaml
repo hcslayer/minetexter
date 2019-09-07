@@ -1,0 +1,13 @@
+runtime: python37
+
+handlers:
+- url: /static
+  static_dir: static
+- url: /.*
+  script: auto 
+
+entrypoint: gunicorn main:app
+env_variables: 
+  TW_ACCT: 'ACcc4c1ee3decc2e241fda61b7761834a7'
+  TW_AUTH: '050304015111e1da11baa9c8df39bd53'
+
